@@ -248,3 +248,38 @@ nav ul li a:hover {
   opacity: 1;
   pointer-events: all;
 }
+/* Responsive Grid Layout for Desktop and Mobile */
+.about-container, .services-container, .portfolio-container, .contact-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 50px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Contact Form */
+.contact-form input, .contact-form textarea, .contact-form button {
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+}
+
+/* Footer and Social Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.social-links a {
+    color: #fff;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+/* Large Screens */
+@media (min-width: 1200px) {
+    .about-container, .services-container, .portfolio-container {
+        grid-template-columns: repeat(3, 1fr); /* Three columns for large screens */
+    }
+}
